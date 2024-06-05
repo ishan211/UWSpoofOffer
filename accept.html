@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Admissions - Student Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff;
+        }
+        
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 1.5em;
+            margin: 0;
+            flex-grow: 1;
+            font-family: impact;
+        }
+        .sidebar {
+            background-color: #f9f9f9;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar .nav-link {
+            display: block;
+            padding: 10px 20px;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            background-color: #e0e0e0;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            color: #0056b3;
+        }
+        .section {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .section h3 {
+            font-size: 1em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .section p {
+            margin: 0;
+            padding: 10px 0;
+        }
+        .section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .section table, .section th, .section td {
+            border: 1px solid #ccc;
+        }
+        .section th, .section td {
+            padding: 10px;
+            text-align: left;
+        }
+        .section th {
+            background-color: #f9f9f9;
+        }
+        .details {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .modal h2 {
+            margin-top: 0;
+        }
+        .modal button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .modal .accept {
+            background-color: #28a745;
+            color: white;
+        }
+        .modal .decline {
+            background-color: #dc3545;
+            color: white;
+        }
+        .modal .close {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!--<img src="https://quest.pecs.uwaterloo.ca/images/quest-logo.png" alt="Quest Logo">-->
+        <!--<button class="btn back">Student Center</button>-->
+        <h1>Quest Admissions</h1>
+    </div>
+    <div class="sidebar">
+        <a href="#" class="nav-link">Student Center</a>
+    </div>
+    <div class="content">
+        <h2>Rojella's Student Center</h2>
+        <div class="section">
+            <h3>Application</h3>
+            <p>Fall 2024 | Software Engineering, Honours, Co-operative Program</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Program</th>
+                        <th>Campus</th>
+                        <th>Attendance</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Offer</th>
+                        <th>Entrance Awards</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fall 2024</td>
+                        <td>Software Engineering, Honours, Co-operative Program</td>
+                        <td>UW</td>
+                        <td>Full-Time</td>
+                        <td>04/03/2024</td>
+                        <td><a href="#" id="status-link" class="details">Offer Pending</a></td>
+                        <td><a href="#" class="details">View Letter</a></td>
+                        <td><a href="#" class="details">View Award Offer(s)</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h3>Conditions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Conditions</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High School Transcript</td>
+                        <td>✔️ Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Eng Final Conditions</td>
+                        <td>🔸 Initiated</td>
+                    </tr>
+                    <tr>
+                        <td>Electronic final grades</td>
+                        <td>🔸 Initiated</td>
+                    </tr>
+                    <tr>
+                        <td>Document Deadlines</td>
+                        <td>🔸 Initiated</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h3>Helpful Information</h3>
+            <p>Graduate Application Process | Undergraduate Document Uploads | Housing & Residences</p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="statusModal" class="modal">
+        <div class="modal-content">
+            <h2>Offer Status</h2>
+            <p>Do you want to accept or decline the offer?</p>
+            <button class="accept">Accept</button>
+            <button class="decline">Decline</button>
+            <button class="close">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("statusModal");
+        const statusLink = document.getElementById("status-link");
+        const closeModalButton = document.querySelector(".modal .close");
+        const acceptButton = document.querySelector(".modal .accept");
+        const declineButton = document.querySelector(".modal .decline");
+
+        statusLink.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        };
+
+        closeModalButton.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        acceptButton.onclick = function() {
+            statusLink.textContent = "Intention to Matriculate";
+            modal.style.display = "none";
+        };
+
+        declineButton.onclick = function() {
+            statusLink.textContent = "Offer Declined";
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

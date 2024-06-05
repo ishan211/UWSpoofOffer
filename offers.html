@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Center - Quest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 1.5em;
+            margin: 0;
+            flex-grow: 1;
+            font-family: impact;
+        }
+        .sidebar {
+            background-color: #f9f9f9;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar .nav-link {
+            display: block;
+            padding: 10px 20px;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            background-color: #e0e0e0;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            color: #0056b3;
+        }
+        .section {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .section h3 {
+            font-size: 1em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .section p {
+            margin: 0;
+            padding: 10px 0;
+        }
+        .section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .section table, .section th, .section td {
+            border: 1px solid #ccc;
+        }
+        .section th, .section td {
+            padding: 10px;
+            text-align: left;
+        }
+        .section th {
+            background-color: #f9f9f9;
+        }
+        .details {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!--<img src="https://quest.pecs.uwaterloo.ca/images/quest-logo.png" alt="Quest Logo">-->
+        <h1>Quest</h1>
+    </div>
+    <div class="sidebar">
+        <a href="#" class="nav-link">Student Center</a>
+    </div>
+    <div class="content">
+        <h2>Rojella's Student Center</h2>
+        <div class="section">
+            <h3>Academics</h3>
+            <p>Other Academic Information</p>
+        </div>
+        <div class="section">
+            <h3>Finances</h3>
+            <p>Tax Receipts | Promissory Note | Manage My Bank Account</p>
+        </div>
+        <div class="section">
+            <h3>Personal Information</h3>
+            <p>Demographic Data | Emergency Contact</p>
+            <h4>Contact Information</h4>
+            <p>
+                Home: 11400 Kingfisher Drive, Richmond, British Columbia V7E3X5<br>
+                Mailing: 11400 Kingfisher Drive, Richmond, British Columbia V7E3X5<br>
+                Home Phone: None<br>
+                Campus Email: None
+            </p>
+        </div>
+        <div class="section">
+            <h3>Admissions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Career</th>
+                        <th>Program</th>
+                        <th>Campus</th>
+                        <th>Documents</th>
+                        <th>OUAC Choice Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fall 2024 Transfer</td>
+                        <td>Undergrad</td>
+                        <td><a href="./accept.html" class="details">Software Engineering, Honours, Co-operative Program</a></td>
+                        <td>UW</td>
+                        <td>Documents</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h3>Holds</h3>
+            <p>Admissions Early Consideration - <a href="#" class="details">Details</a></p>
+        </div>
+        <div class="section">
+            <h3>Milestones</h3>
+            <p>No Milestones</p>
+        </div>
+        <div class="section">
+            <h3>Finance Information</h3>
+            <p>Student Awards & Financial Aid | Grad Studies Awards & Funding | Student Financial Services</p>
+        </div>
+        <div class="section">
+            <h3>Academic Information</h3>
+            <p>Registrar's Office | Grad Studies & Postdoc Affairs | How Do I? Instructions</p>
+        </div>
+        <div class="section">
+            <h3>Other Useful Links</h3>
+            <p>Co-op Ed & Career Action | OSAP | The Student Portal</p>
+        </div>
+    </div>
+</body>
+</html>

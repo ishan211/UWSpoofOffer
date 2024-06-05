@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Waterloo - Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./images/UW_login_bg.png');
+            /*background-image: url('https://media.istockphoto.com/id/1205214235/photo/path-through-sunlit-forest.jpg?s=612x612&w=0&k=20&c=-AS1aTz85kcZ2X7E8n2iFlm6dsdIMyWGWrSDQ1o-f_0=');*/
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        .login-container h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #005bb5;
+        }
+
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        a:active {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="./images/uw_logo.png" alt="University of Waterloo Logo">
+        <h2>Sign in with username@uwaterloo.ca</h2>
+        <form>
+            <input type="email" id="email" name="email" value="r24santos@uwaterloo.ca" required>
+            <input type="password" id="password" name="password" value="rsantos24" required>
+            <button type="submit"><a href="./landing.html">Next</a></button>
+        </form>
+    </div>
+</body>
+</html>
